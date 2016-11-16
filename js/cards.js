@@ -1,12 +1,14 @@
 "use strict";
 
-var userInput = document.getElementById('editInput'),
-    cardStyle = {};
+var cardStyle = {},
+    userInput;
 
 cardStyle.highlightCard = function(event) {
   // grab all the "is-clicked" elements and remove the class
   // before adding it to the latest clicked card
+  userInput = document.getElementById('editInput');
   var carCards = document.getElementsByClassName("is-clicked");
+ 
   if (carCards.length > 0) {
     for (var i = 0; i < carCards.length; i++ ) {
       carCards[i].classList.remove("is-clicked");
